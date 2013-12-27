@@ -6,19 +6,35 @@
     <title>Stub Demo - X-Tag</title>
     <link rel="stylesheet" type="text/css" href="x-tag-components.css"/>
 	<link rel="stylesheet" type="text/css" href="../src/main.css"/>
-
-    <script type="text/javascript" src="x-tag-components.js"></script> 
-    <script type="text/javascript" src="../src/main.js"></script>      
+    
+    <script type="text/javascript" src="x-tag-components.js"></script>
+    <script type="text/javascript" src="onpress.js"></script> 
+    <script type="text/javascript" src="../src/main.js"></script> 
 	<style>
-
+     body { 
+      font-family: helvetica, arial;
+     }
 	</style>
+    <script>
+    var tabbar = document.querySelector("sam-tabbar");
+    tabbar.addEventListener("tabChanged", function (event) {
+      document.querySelector("div").innerHTML = event.detail;
+    });
+   </script>
 </head>
 
 <body>
-
-	<h2>Create a Demo</h2>
-
-
+  <sam-tabbar>
+    <button role="tab" id="1" active>Tab1</button>
+    <button role="tab" id="2">Tab2</button>
+    <button role="tab" id="3">Tab3</button>
+    <button role="tab" id="4">Tab4</button>
+    <button role="tab" id="5">Tab5</button>
+    <button role="tab" id="6">Tab6</button>
+    <button role="tab" id="7">Tab7</button>
+    <button role="tab" id="8">Tab8</button>
+  </sam-tabbar>
+  <div>1</div>
 </body>
 
 </html>
