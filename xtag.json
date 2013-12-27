@@ -1,11 +1,11 @@
 {
-	"name": "stub",
-	"tagName": "x-stub",
+	"name": "sam-tabber",
+	"tagName": "sam-tabbar",
 	"version": "0.1.0",
-	"author": "you",
-	"description": "",
+	"author": "Samarth AGARWAL",
+	"description": "A tabbar element",
 	"demo": "demo/index.html",
-	"categories": [],
+	"categories": ["navigation"],
 	"compatibility": {
 		"firefox": 5,
 		"chrome": 4,
