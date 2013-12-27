@@ -29,7 +29,7 @@
     accessors: {
       role: {
         attribute: true
-      }
+      },
       active: true
     }, 
     methods: {
