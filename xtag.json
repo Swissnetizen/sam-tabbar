@@ -1,7 +1,7 @@
 {
 	"name": "sam-tabber",
 	"tagName": "sam-tabbar",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"author": "Samarth AGARWAL",
 	"description": "A tabbar element",
 	"demo": "demo/index.html",
