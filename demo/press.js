@@ -2,7 +2,7 @@
   "use strict";
   xtag.customEvents.press = {
     maxHold: 1500,
-    base: [
+    attach: [
       //Touch events
       "touchstart",
       "touchmove",
@@ -14,7 +14,7 @@
       "mouseleave",
       "mouseup"
     ],
-    condition: function (custom, event) {
+    condition: function (event, press) {
       var el = event.target, data, type;
       //Creates data object
       if (!el.xtag) el.xtag = {};
