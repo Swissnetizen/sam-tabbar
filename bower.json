@@ -1,10 +1,11 @@
 {
-  "name": "stub",
-  "description": "",
+  "name": "sam-tabbar",
+  "description": "A tabbar",
   "version": "0.1.0",
   "keywords": [
     "web-components",    
-    "x-tag"
+    "x-tag",
+    "customevents"
   ],
   "main": [
     "src/main.js",
