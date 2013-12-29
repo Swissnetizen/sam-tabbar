@@ -22,7 +22,7 @@
           document.querySelector("h1").innerHTML = event.detail;
         });
         tabbar.addEventListener("activeTabPress", function () {
-          alert("Active Tab Pressed");
+          tabbar.setTab(prompt("Active Tab pressed: SetTab: enter number 1-8"), true); 
         });
       };
     </script>
