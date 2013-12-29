@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="x-tag-components.css"/>
 	<link rel="stylesheet" type="text/css" href="../src/main.css"/>
     
-    <script type="text/javascript" src="x-tag-components.js"></script>
-    <script type="text/javascript" src="onpress.js"></script> 
+    <script type="text/javascript" src="x-tag-core.js"></script>
+    <script type="text/javascript" src="press.js"></script> 
     <script type="text/javascript" src="../src/main.js"></script> 
 	<style>
      body { 
@@ -16,16 +16,21 @@
      }
 	</style>
     <script>
-    var tabbar = document.querySelector("sam-tabbar");
-    tabbar.addEventListener("tabChanged", function (event) {
-      document.querySelector("div").innerHTML = event.detail;
-    });
-   </script>
+      window.onload = function () {
+        var tabbar = document.querySelector("sam-tabbar");
+        tabbar.addEventListener("tabChange", function (event) {
+          document.querySelector("h1").innerHTML = event.detail;
+        });
+        tabbar.addEventListener("activeTabPress", function () {
+          alert("Active Tab Pressed");
+        });
+      };
+    </script>
 </head>
 
 <body>
   <sam-tabbar>
-    <button role="tab" id="1" active>Tab1</button>
+    <button role="tab" id="1" data-start-active>Tab1</button>
     <button role="tab" id="2">Tab2</button>
     <button role="tab" id="3">Tab3</button>
     <button role="tab" id="4">Tab4</button>
@@ -34,7 +39,7 @@
     <button role="tab" id="7">Tab7</button>
     <button role="tab" id="8">Tab8</button>
   </sam-tabbar>
-  <div>1</div>
+  <h1>1</h1>
 </body>
 
 </html>
