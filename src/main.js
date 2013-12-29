@@ -28,19 +28,21 @@
     }, 
     methods: {
       setTab: function (tabid, fireEvent) {
-        var eventName = "tabChange",
-            result = true;
+        var eventName = "tabChange";
+        if (!this.querySelector("[id='"+tabid+"'][role='tab']")) {
+          console.error("Cannot set to unknown tabid");
+          return false;
+        }
         //Checks if person is trying to set to currently active tab
         if (this.activeTabId === tabid) {
           eventName = "activeTabPress"
-          result = false;
         } else {
           document.getElementById(this.activeTabId).dataset.active = false;
           this.activeTabId = tabid;
           document.getElementById(this.activeTabId).dataset.active = true;
         }
         if (fireEvent) xtag.fireEvent(this, eventName, {detail: this.activeTabId});
-        return result;
+        return true;
     }
     }
   });
