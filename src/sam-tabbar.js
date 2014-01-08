@@ -8,7 +8,7 @@
         }
       },
       inserted: function() {
-        this.activeTabId = this.querySelector("[role='tab'][data-start-active]").id;
+        this.activeTabId = this.querySelector("[role='tab'][data-active=true]").id;
       },
       removed: function() {},
       attributeChanged: function() {}
