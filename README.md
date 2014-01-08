@@ -25,7 +25,7 @@ tabbar.addEventListener("activeTapPress", function (event) {
 //Set tab, accepts 2 arguments
 //1. tabid
 //2. fire tabChange/activeTabPress events
-setTab(tabid, true);
+tabbar.setTab(tabid, true);
 var tabid = tabbar.activeTabId;
 </script>
 
