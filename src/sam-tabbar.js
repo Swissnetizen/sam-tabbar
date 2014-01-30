@@ -15,7 +15,7 @@
     }, 
     events: { 
       "press": function (event) {
-        var el = event.originalTarget;
+        var el = event.target;
         //Checks if a tab was pressed
         if (!el || el.getAttribute("role") !== "tab") return;
         this.setTab(el.id, true);
