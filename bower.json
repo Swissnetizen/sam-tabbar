@@ -8,11 +8,17 @@
     "customevents"
   ],
   "main": [
-    "src/main.js",
-    "src/main.css"
+    "src/sam-tabbar.js",
+    "src/sam-tabbar.css"
   ],
   "dependencies": {
     "x-tag-core": "*",
     "onpress": "*"
-  }
+  },
+  "ignore": [
+    "demo/",
+    "GruntFile.js",
+    "package.json",
+  ],
+  "license": "MPL"
 }
